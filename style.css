@@ -1,4 +1,295 @@
+body{
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Noto Sans', sans-serif;
+
+    margin:0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto 0;
+    top: 100px;
+}
+
+
 .hidden {
 display: none;
+}
 
+img{
+    width: 100%;
+}
+
+/* 시계 */
+.timeZone{
+    font-family: Lobster;
+    position: absolute;
+    left: 40px;
+    top: 0px;
+}
+
+.timeZone p{
+    font-size:30px;
+    padding: 0;
+    margin-bottom: 0;
+    color: white;
+}
+
+#clock{ 
+     margin-top: 0;
+     font-size:80px;
+     width: 300px;
+     color: white;
+     text-shadow: 6px 6px 0px rgb(0 0 0 / 20%); 
+     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+     background-repeat: no-repeat;
+     background-size: 100% 30%;
+     background-position: 0 88%;  
+     transition: background-size 0.25s ease-in;  
+}
+
+#clock:hover{
+    background-size: 100% 100%; 
+}
+
+/* 로그인 안내 메시지  */
+.greeting{
+    font-family: Lobster;
+    font-size:80px;
+    letter-spacing: 5px;
+    border: 5px dotted white;
+    color: skyblue;
+    background-color: #F2DCFF;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+.greeting:hover{
+    transition: 1s ease-out;
+    color: rgb(42, 228, 228);
+    background-color: rgba(241, 153, 20, 0.6);
+    border-radius: 40px;
+    transform: scale(1.1);
+}
+
+.greeting:not(:hover){
+    transition: 1s ease-out;
+}
+
+/* TODO 리스트 */
+input[type=text]  {
+    border-top: none;
+    border-left:none;
+    border-right: none;
+    width: 300px;
+    border-bottom: 3px white solid;
+    background-color:transparent; 
+    text-align: center;
+    color: aliceblue;
+}
+
+input[type=submit]{
+    border: 3px solid skyblue;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: skyblue; 
+    font-family: Noto Sans;  
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+
+input:focus{
+    outline: none;  
+    color: white 
+    }
+
+input::placeholder {
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+}
+
+#todo-list img{
+    width: 20px;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+#todo-list{
+ font-family: Noto Sans;
+ font-size: 25px;
+ color: black;
+ font-weight: bold;
+ background-color: rgba(255, 255, 255, 0.4);
+ border-radius: 20px;
+ padding: 30px 30px;
+}
+
+#todo-list li{
+ background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+ background-repeat: no-repeat;
+ background-size: 100% 20%;
+ background-position: 0 80%; 
+ }
+
+
+/* 날씨 */
+.weatherZone{
+    position: absolute;
+    width: 200px;
+    right: 100px;
+    top: 50px;  
+    color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: Lobster;
+    font-size:20px;
+    text-shadow: 6px 6px 0px rgb(0 0 0 / 20%);
+    box-shadow: 20px 20px 10px rgb(0 0 0 / 20%);
+}
+
+#weather_icons_cloud, #weather_icons_rain{
+    margin-top: 30px;
+    float: left;
+    width: 100px;
+    animation: blink 1.4s infinite ease-in-out alternate;
+}
+
+/* 사이트 링크 */
+a{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+    /* text-shadow: 6px 6px 0px rgb(0 0 0 / 20%); */
+    background-image: linear-gradient(120deg, #afec86 0%, #6f61ec 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-position: 0 88%;  
+    transition: background-size 0.25s ease-in;
+}
+
+.siteLink{
+    position: absolute;
+    right: 100px;
+    top: 310px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 10px 20px;    
+}
+
+.siteLink span{
+    font-family: Lobster;
+    font-size: 30px;
+}
+
+a:hover{
+    background-size: 100% 100%; 
+}
+
+.penImg{
+    float: left;
+    opacity: 0.6;
+    top: 100px;
+    width:150px;
+    animation: up-down-hand 1.4s infinite ease-in-out alternate; 
+}
+
+
+/* 명언 */
+#quoteZone {     
+     position: absolute;
+     left: 40px;
+     bottom: 50px;     
+     color: white;
+     background-color: rgba(255, 255, 255, 0.4);
+     border-radius: 10px;
+     padding: 10px 20px;
+     /* 위아래로 움직이는 상자 효과 */
+     animation: up-down 1.4s infinite ease-in-out alternate; 
+}
+
+#quoteZone span{
+    font-family: Lobster;
+    letter-spacing: 3px;
+    font-size:35px;
+}
+
+
+#quote .firstQuote{
+    font-family: Noto Sans;
+    font-size:20px;
+    margin:0;
+    margin-top: 30px;
+    background-image: linear-gradient(120deg, #f0b445 0%, #f02c12 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-position: 0 88%;  
+}
+
+#quote .lastQuote{
+    font-family: Noto Sans;
+    font-size:20px;
+    width: 150px;
+    margin:0;
+    background-image: linear-gradient(120deg, #afec86 0%, #6f61ec 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-position: 0 88%;  
+}
+
+@keyframes up-down{
+    from{
+      /* transform: translatey(0px); */
+      background-color: rgba(255, 255, 255, 0.3);
+      opacity: 0.4;
+    }
+    to{
+      /* transform: translatey(-20px); */
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+    }
+  }
+
+  @keyframes blink{
+    from{
+        opacity: 0.5; 
+        transform: scale(1);   
+      }
+      to{         
+        opacity: 1;
+        transform: scale(1.1);         
+      }
+
+  }
+
+  @keyframes up-down-hand{
+    from{
+      transform: translatey(0px);   
+    }
+
+    to{
+      transform: translatey(-20px);
+    }
+  }
+
+
+
+/* 저작권 표시 */
+.reserved {
+    position: absolute;
+    color: white;
+    right: 10px;
+    font-size: 12px;
+    opacity: 0.5;
+    bottom: 0;
 }
