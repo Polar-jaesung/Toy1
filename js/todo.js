@@ -29,7 +29,7 @@ function paintTodo(newTodo){
     const trashImg ="trash.png";
     // btn.innerText="✂️"
     // 버튼 대신 이미지로 대체함
-    img.src=`Practice1/todo/${trashImg}`;
+    img.src=`/todo/${trashImg}`;
     
     img.addEventListener("click",deleteTodo);
     li.appendChild(span);
