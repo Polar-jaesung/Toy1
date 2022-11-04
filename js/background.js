@@ -37,6 +37,7 @@ lightBtn.addEventListener('click',()=>{
 
 darkBtn.addEventListener('click',()=>{
 
+    // window.location.replace(location.href);
     bgImage.src =`img/${chosenImg_dark}`;
     document.body.appendChild(bgImage);
 });
