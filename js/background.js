@@ -30,14 +30,13 @@ const lightBtn = document.querySelector('.lightBtn');
 const DARKBTN_CLASS='dark_mode';
 
 lightBtn.addEventListener('click',()=>{
-
-document.body.classList.remove(DARKBTN_CLASS);
-
-})
+    bgImage.src =`img/${chosenImg_light}`;
+    document.body.appendChild(bgImage);
+});
 
 
 darkBtn.addEventListener('click',()=>{
 
-    document.body.classList.add(DARKBTN_CLASS);
-    
-})
+    bgImage.src =`img/${chosenImg_dark}`;
+    document.body.appendChild(bgImage);
+});
