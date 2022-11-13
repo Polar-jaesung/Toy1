@@ -13,6 +13,11 @@ const bgList_light =[
 const bgList_dark=[
     "5.png",
     "6.jpg",
+    "12.png",
+    "13.jpg",
+    "14.png",
+    "15.jpg",
+    "16.jpg",
 ];
 
 const chosenImg_light = bgList_light[Math.floor(Math.random()*bgList_light.length)];

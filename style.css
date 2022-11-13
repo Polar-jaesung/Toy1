@@ -206,6 +206,7 @@ a:hover{
 }
 
 /* 다크모드 */
+/* 다크모드 버튼 */
 .darkMode{
     position: absolute;
     bottom: 50px;
@@ -245,11 +246,19 @@ margin-right: 40px;
     opacity: 1;
 }
 
+.darkBtn img{
+    opacity: 1;
+    transition: all 300ms ease-in;
+}
 
+.darkBtn:hover img{
+    opacity: 0.5;
+}
+
+/* 라이트 모드 버튼 */
 .lightBtn{
     position: relative;
 }
-
 
 .lightword{
     position: absolute; 
@@ -266,6 +275,15 @@ margin-right: 40px;
 .lightBtn:hover .lightword{
     top: 50px;
     opacity: 1;
+}
+
+.lightBtn img{
+    opacity: 1;
+    transition: all 300ms ease-in;
+}
+
+.lightBtn:hover img{
+    opacity: 0.5;
 }
 
 
